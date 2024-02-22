@@ -34,19 +34,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: hsl(0, 0%, 0%);
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #ffffff;
+$background-alt: #ffffff;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #000000;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #000000;
+$text: #000000;
 
 /*
     ---------------------
@@ -359,19 +359,19 @@ footer {
 #lead-content {
     position: absolute;
     z-index: 10;
-    top: 50%;
-    left: 50%;
+    top: 36%;
+    left: 17%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
 
     h1, h2 {
         margin: 0;
     }
 
     h1 {
-        color: #fff;
+        color: #ffffff;
         font-weight: 900;
-        font-size: 5em;
+        font-size: 3.4em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -393,7 +393,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0);
     z-index: 1;
 }
 
@@ -751,16 +751,18 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
-        color: #fff;
+        // Define base and accent colors
+        $base-color_end: hsl(0, 0%, 100%);
+        background: darken($base-color_end, 0%);
+        color: #000000;
         @include transition();
         @include placeholder {
-            color: #fff;
+            color: #000000;
         }
 
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: darken($base-color_end, 0%);
         }
     }
 
