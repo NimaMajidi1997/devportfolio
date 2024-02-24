@@ -985,18 +985,28 @@ footer {
 // Extra Small Devices
 @media only screen and (max-width : 480px) {
 
-    #lead-content {
-        h1 {
-            font-size: 1.5em;
-        }
 
-        h2 {
+    #lead {
+        position: relative;
+        height: 38vh;
+        background: url(../images/lead-bg.jpg);
+        background-size: cover;
+        padding: 10px;
+    }
+
+    #lead-content {
+        
+        h1 {
             font-size: 1em;
         }
 
+        h2 {
+            font-size: 0.75em;
+        }
+
         a {
-            font-size: 0.9em;
-            padding: 5px 10px;
+            padding: 4px;
+            font-size: 0.7em;
         }
     }
 
