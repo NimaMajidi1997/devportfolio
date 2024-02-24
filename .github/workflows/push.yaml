@@ -45,10 +45,10 @@ jobs:
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'docker pull $MY_IMAGE'
+          ssh -o StrictHostKeyChecking=no $ip_add 'docker pull nimaianp75/devops_web:1.0.0'
 
       - name: SSH to Server and Run Docker Container
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'docker run -d -p 80:80 --name port_web $MY_IMAGE'
+          ssh -o StrictHostKeyChecking=no $ip_add 'docker run -d -p 80:80 --name port_web nimaianp75/devops_web:1.0.0'
