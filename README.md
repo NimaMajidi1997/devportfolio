@@ -8,3 +8,4 @@ To learn different aspects of DevOps:
 
 
 tag 1.0.0 --> initial setup
+	1.0.1 --> bug for mobile phone fixed, education added
