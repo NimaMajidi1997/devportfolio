@@ -39,7 +39,7 @@ jobs:
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'docker pull nimaianp75/devops_web:24.2.24'
+          ssh -v -o StrictHostKeyChecking=no $ip_add 'docker pull nimaianp75/devops_web:24.2.24'
 
       - name: SSH to Server and Run Docker Container
         env:
