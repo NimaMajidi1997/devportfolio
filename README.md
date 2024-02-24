@@ -1,2 +1,4 @@
 # DevOpsAdventures
-to learn different aspects of DevOps
+To learn different aspects of DevOps:
+	1. Making Dockerfile
+	2. build image and run container
