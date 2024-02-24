@@ -20,4 +20,4 @@ jobs:
         run: docker build -t nimaianp75/devops_web:24.2.24 .
 
       - name: Push Docker image to Docker Hub
-        run: docker push nimaianp75/devops:24.2.24
+        run: docker push nimaianp75/devops_web:24.2.24
