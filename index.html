@@ -69,12 +69,45 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading" style="font-family: 'Times New Roman', Times, serif;">About Me  &#128522;&#128125;</h2>
+                    <h2 class="heading" style="font-family: 'Times New Roman', Times, serif;">About Me  &#128125;</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-                        I pursued an M.Sc. in Communication and Multimedia Engineering, with a focus on signal processing. Currently, I dedicated myself to advancing my skills to become a proficient DevOps Engineer.
+                    <p style="margin: 0; padding: 0;text-align: center;">
+                        I pursued an M.Sc. in Communication and Multimedia Engineering, with a focus on signal processing.
+                        Currently, I dedicated myself to advancing my skills to become a proficient DevOps Engineer. Discipline and Systematic mindset are my friends.
+                        <br></br> 
+                        <strong><u>My problem-solving roadmap</u></strong>
+                        <p style="text-align: center;">Define task clearly, break down into subtasks, prioritize dependencies, take action! </p>
+                        <br></br> 
+                        <p style="text-align: center;">Still here&#128522;? Let's have a look on my reference letters! </p>
                     </p>
+                    <style>
+                        /* CSS for button styling */
+                        .my-button1 {
+                            background-color: #4CAF50; /* Green background */
+                            border-width: 1.5px;
+                            border-style: solid;
+                            border-color: black;
+                            color: white; /* White text */
+                            padding: 9px 20px; /* Padding around text */
+                            text-align: center; /* Center text horizontally */
+                            text-decoration: none; /* Remove underline from text */
+                            display: inline-block; /* Display as inline block */
+                            font-size: 16px; /* Font size */
+                            cursor: pointer; /* Cursor style on hover */
+                            border-radius: 30px; /* Rounded corners */
+                            transform: translate(100%, -60%);
+                        }
+                
+                        /* Hover effect */
+                        .my-button1:hover {
+                            background-color: #45a049; /* Darker green on hover */
+                        }
+                    </style> 
+                    <br></br>    
+                    <button class="my-button1" id="pdfButton">Fraunhofer_IIS</button>
+                    <button class="my-button1" id="pdfButton1">Stabilo International GmbH</button>
+
                 </div>
             </div>
         </div>
@@ -356,6 +389,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+        document.getElementById('pdfButton').addEventListener('click', function() {
+            var pdfUrl = 'Reference_FhG.pdf'; // Replace with the path to your PDF file
+            var newTab = window.open();
+            newTab.document.body.innerHTML = '<iframe src="' + pdfUrl + '" style="width:100%; height:100vh;"></iframe>';
+        });
+    </script>
+    <script>
+        document.getElementById('pdfButton1').addEventListener('click', function() {
+            var pdfUrl = 'Reference_STABILO.pdf'; // Replace with the path to your PDF file
+            var newTab = window.open();
+            newTab.document.body.innerHTML = '<iframe src="' + pdfUrl + '" style="width:100%; height:100vh;"></iframe>';
+        });
+    </script>
 </body>
 
 </html>
