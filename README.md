@@ -11,3 +11,4 @@ tag 1.0.0 --> initial setup
 	1.0.1 --> bug for mobile phone fixed, education added
 tag 2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
 	2.0.1 --> About me completed
+	2.0.2 --> Certificates added
