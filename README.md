@@ -14,3 +14,4 @@ tag 2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
 	2.0.2 --> Certificates added
 	2.0.3 --> Contact implemented
 	2.0.4 --> resume updated
+	2.0.5 --> resume modified
