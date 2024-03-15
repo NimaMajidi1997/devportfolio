@@ -1,12 +1,16 @@
-# Use NGINX base image from Docker Hub
-FROM nginx
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+# Update package repositories and install nginx
+RUN apt update && apt install -y nginx
 
 # Remove the default NGINX configuration file
-RUN rm /etc/nginx/conf.d/default.conf
+RUN rm etc/nginx/sites-enabled/default
 
 # Copy the new configuration file
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nimadevops.conf /etc/nginx/sites-available/
 
+RUN sudo ln -s /etc/nginx/sites-available/nimadevops.conf /etc/nginx/sites-enabled/
 # Remove the default NGINX welcome page
 RUN rm -rf /usr/share/nginx/html/*
 
@@ -14,10 +18,10 @@ RUN rm -rf /usr/share/nginx/html/*
 RUN apt-get update && apt-get install -y git
 
 # Create a new directory
-RUN mkdir -p /usr/share/nginx/html/devportfolio
+RUN sudo mkdir -p /var/www/nimadevops/html
 
 # Clone the portfolio repository from GitHub
-RUN git clone https://github.com/NimaMajidi1997/devportfolio.git /usr/share/nginx/html/devportfolio/
+RUN git clone https://github.com/NimaMajidi1997/devportfolio.git /var/www/nimadevops/html
 
 # Expose port 80
 EXPOSE 80

@@ -9,6 +9,7 @@ To learn different aspects of DevOps:
 
 tag 1.0.0 --> initial setup
 	1.0.1 --> bug for mobile phone fixed, education added
+	
 tag 2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
 	2.0.1 --> About me completed
 	2.0.2 --> Certificates added
@@ -16,3 +17,5 @@ tag 2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
 	2.0.4 --> resume updated
 	2.0.5 --> resume modified
 	2.1.0 --> phone display fixed
+
+	3.0.0 --> change the nginx image from debian to ubuntu
