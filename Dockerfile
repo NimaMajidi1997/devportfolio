@@ -19,7 +19,9 @@ RUN apt-get update && apt-get install -y git
 
 # Create a new directory
 RUN mkdir -p /var/www/nimadevops/html
-
+# Assign ownership of the directory with the $USER environment variable
+RUN chown -R $USER:$USER /var/www/nimadevops/html
+RUN chmod -R 755 /var/www/nimadevops
 # Clone the portfolio repository from GitHub
 RUN git clone https://github.com/NimaMajidi1997/devportfolio.git /var/www/nimadevops/html
 
