@@ -51,4 +51,4 @@ jobs:
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0'
+          ssh -o StrictHostKeyChecking=no $ip_add 'docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0'
