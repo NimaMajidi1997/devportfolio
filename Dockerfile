@@ -10,7 +10,7 @@ RUN rm etc/nginx/sites-enabled/default
 # Copy the new configuration file
 COPY nimadevops.conf /etc/nginx/sites-available/
 
-RUN sudo ln -s /etc/nginx/sites-available/nimadevops.conf /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/nimadevops.conf /etc/nginx/sites-enabled/
 # Remove the default NGINX welcome page
 RUN rm -rf /usr/share/nginx/html/*
 
@@ -18,7 +18,7 @@ RUN rm -rf /usr/share/nginx/html/*
 RUN apt-get update && apt-get install -y git
 
 # Create a new directory
-RUN sudo mkdir -p /var/www/nimadevops/html
+RUN mkdir -p /var/www/nimadevops/html
 
 # Clone the portfolio repository from GitHub
 RUN git clone https://github.com/NimaMajidi1997/devportfolio.git /var/www/nimadevops/html
