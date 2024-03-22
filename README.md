@@ -21,3 +21,4 @@ tag 2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
 	3.0.0 --> change the nginx image from debian to ubuntu
 	3.1.0 --> ssl certificates added for https
 	3.1.1 --> add favicon and title
+tag 3.2.0 --> certificates in table, fix responsive
