@@ -25,6 +25,6 @@
 	3.1.1 --> add favicon and title
 	3.2.0 --> certificates in table, fix responsive
  
-# &#128640 Windows Containers
+# &#128640; Windows Containers
 	Sample1: Dockerfile
  	These Packages are installed properly:
