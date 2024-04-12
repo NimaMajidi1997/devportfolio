@@ -1,6 +1,7 @@
 # DevOpsAdventures
-To learn different aspects of DevOps:
-Te
+# To learn different aspects of DevOps
+
+# Website setup:
 	1. Making Dockerfile
 	2. Build image and run container
 	3. Push image to Dockerhub (dockerhub token)
@@ -23,3 +24,7 @@ Te
 	3.1.0 --> ssl certificates added for https
 	3.1.1 --> add favicon and title
 	3.2.0 --> certificates in table, fix responsive
+ 
+# &#128640 Windows Containers
+	Sample1: Dockerfile
+ 	These Packages are installed properly:
