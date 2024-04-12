@@ -1,5 +1,6 @@
 # DevOpsAdventures
 To learn different aspects of DevOps:
+Te
 	1. Making Dockerfile
 	2. Build image and run container
 	3. Push image to Dockerhub (dockerhub token)
