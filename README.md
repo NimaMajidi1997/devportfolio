@@ -7,6 +7,7 @@
 	3. Push image to Dockerhub (dockerhub token)
 	4. Deploy image to the Server (private key for github and public one for ~/.ssh/authorized_keys)
 	5. Run container inside the server
+ 	6. https://www.nimadevops.de
 
 
 	1.0.0 --> initial setup
@@ -28,11 +29,11 @@
 # &#128640; Windows Containers
 	Sample1: Dockerfile
  	I made a Dockerfile to have a windows container based on these Packages:
-  	   1.windows server 2019
-	   2.Git-2.44.0-64
-	   3.python-3.10.0
-	   4.conan==1.57.0
-	   5.cmake-3.29.0
-	   6.cuda_12.1.0_531.14
-    	   7.visual studio 2019
+		1.windows server 2019
+		2.Git-2.44.0-64
+		3.python-3.10.0
+		4.conan==1.57.0
+		5.cmake-3.29.0
+		6.cuda_12.1.0_531.14
+		7.visual studio 2019
   	
