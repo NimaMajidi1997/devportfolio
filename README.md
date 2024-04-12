@@ -1,7 +1,7 @@
 # DevOpsAdventures
 # To learn different aspects of DevOps
 
-# Website setup:
+# &#128640; Website setup:
 	1. Making Dockerfile
 	2. Build image and run container
 	3. Push image to Dockerhub (dockerhub token)
@@ -28,3 +28,4 @@
 # &#128640; Windows Containers
 	Sample1: Dockerfile
  	These Packages are installed properly:
+  	
