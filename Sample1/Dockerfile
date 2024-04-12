@@ -29,7 +29,6 @@ RUN powershell.exe Remove-Item -Path C:\\cuda_installer.ps1, C:\\cuda_12.1.0_531
 RUN start /w vs_buildtools.exe --quiet --wait --norestart --nocache --installPath "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019" \
     --add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools && \
     del vs_buildtools.exe
-RUN mkdir C:\\ipab-Sipp
 
 # Specify the default command to run when the container starts
 CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
