@@ -26,9 +26,16 @@ RUN powershell.exe -ExecutionPolicy Bypass -File C:\\cuda_installer.ps1 ; \
 #RUN nvcc --version && echo "CUDA installed!"
 RUN powershell.exe Remove-Item -Path C:\\cuda_installer.ps1, C:\\cuda_12.1.0_531.14_windows.exe, C:\\Git-2.44.0-64-bit.exe; \
     Exit-PSSession
-RUN start /w vs_buildtools.exe --quiet --wait --norestart --nocache --installPath "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019" \
-    --add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools && \
-    del vs_buildtools.exe
+
+RUN start /w vs_buildtools.exe --quiet --wait --norestart --nocache \
+    --installPath "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019" \
+    --add Microsoft.VisualStudio.Workload.MSBuildTools;includeRecommended \
+    --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended || IF "%ERRORLEVEL%"=="5004" EXIT 0 && \
+    del vs_buildtools.exe  
+
+# to solve "No CUDA toolset found" error during building with conan
+RUN COPY "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\extras\\visual_studio_integration\\MSBuildExtensions\\*" \
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\MSBuild\\Microsoft\\VC\\v160\\BuildCustomizations\\"
 
 # Specify the default command to run when the container starts
 CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
