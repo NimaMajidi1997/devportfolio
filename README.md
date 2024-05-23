@@ -2,6 +2,8 @@
 # To learn different aspects of DevOps
 
 # &#128640; Website setup:
+![Alt text](website_cycle.svg)
+
 	1. Making Dockerfile
 	2. Build image and run container
 	3. Push image to Dockerhub (dockerhub token)
