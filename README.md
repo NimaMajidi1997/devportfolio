@@ -30,7 +30,7 @@
 	3.2.1 --> update resume - V4
 	
 
-	To renew SSL certificates:
+	Renew SSL certificates:
 		docker stop <container_id_or_name>;
 		sudo certbot certonly --standalone -d nimadevops.de -d www.nimadevops.de;
 		docker rm -f port_web || true;
