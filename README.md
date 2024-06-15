@@ -27,8 +27,15 @@
 	3.1.0 --> ssl certificates added for https
 	3.1.1 --> add favicon and title
 	3.2.0 --> certificates in table, fix responsive
-	3.2.1 --> update resume - V3
+	3.2.1 --> update resume - V4
 	
+
+	To renew SSL certificates:
+		docker stop <container_id_or_name>;
+		sudo certbot certonly --standalone -d nimadevops.de -d www.nimadevops.de;
+		docker rm -f port_web || true;
+		sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0
+
 # &#128640; Windows Containers
 	Sample1: Dockerfile
  	I made a Dockerfile to have a windows container based on these Packages:
