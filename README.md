@@ -28,6 +28,7 @@
 	3.1.1 --> add favicon and title
 	3.2.0 --> certificates in table, fix responsive
 	3.2.1 --> update resume - V4
+	3.2.2 --> docker-compose added for testing (docker-compose up --build)
 	
 
 	Renew SSL certificates:
