@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 const uglify = require('gulp-uglify');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const wait = require('gulp-wait');
-const babel = require('gulp-babel');;
+const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 
 gulp.task('scripts', function() {

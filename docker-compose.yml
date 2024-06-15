@@ -9,3 +9,15 @@ services:
     volumes:
       - ./:/usr/share/nginx/html
     restart: unless-stopped
+
+  gulp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gulp_watch
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: npm run watch
+    depends_on:
+      - test_web

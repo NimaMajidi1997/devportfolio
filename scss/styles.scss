@@ -709,7 +709,7 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
+    padding: 15px 15px;
     text-align: center;
 
     h2 {
@@ -721,15 +721,15 @@ footer {
         display: block;
         margin: 0 auto;
         padding: 0;
-        max-width: 800px;
+        max-width: 1000px;
     }
 
     li {
         display: inline-block;
-        margin: 7px;
-        padding: 5px 10px;
+        margin: 4px;
+        padding: 3px 7px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: darken($background-alt, 8%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
