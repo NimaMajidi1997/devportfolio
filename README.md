@@ -29,7 +29,7 @@
 	3.2.0 --> certificates in table, fix responsive
 	3.2.1 --> update resume - V4
 	3.2.2 --> docker-compose added for testing (docker-compose up --build)
-	
+	3.3.0 --> docker certificate added, modify style
 
 	Renew SSL certificates:
 		docker stop <container_id_or_name>;
