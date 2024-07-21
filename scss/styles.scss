@@ -449,8 +449,8 @@ footer {
 */
 
 #about {
-    padding: 15px 15px;
-    border-bottom: 1px solid $border;
+    padding: 2px 15px;
+    border-bottom: 2px dashed $border;
 
     h2 {
         color: $heading;
@@ -470,17 +470,18 @@ footer {
 */
 
 #experience {
-    padding: 20px 15px;
+    padding: 0px 15px;
     text-align: center;
     border-bottom: 1px solid $border;
 
     h2 {
         color: $heading;
+        margin: 0px 0px 0px 0px;
     }
 }
 
 #experience-timeline {
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
     position: relative;
     max-width: 1000px;
 
@@ -492,7 +493,7 @@ footer {
         left: 303px;
         right: auto;
         height: 100%;
-        width: 3px;
+        width: spx;
         background: $base-color;
         z-index: 0;
     }
@@ -511,14 +512,14 @@ footer {
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #fff;
-    border: 2px solid #000000;
-    padding: 15px;
+    background: #ecf4d9;
+    border: 1px solid #000000;
+    padding: 10px;
     border-radius: 25px;
     text-align: left;
-    width: 870px;
+    width: 1000px;
     h3 {
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-weight: 300;
         color: $heading;
         display: inline-block;
@@ -526,7 +527,7 @@ footer {
     }
 
     h4 {
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: 300;
         color: #7e8890;
         margin: 0 0 15px 0;
@@ -542,13 +543,12 @@ footer {
 .vtimeline-point {
     position: relative;
     display: block;
-    vertical-align: top;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: #ecf4d9;
     width: 50px;
     height: 50px;
     background: $base-color;
@@ -570,9 +570,9 @@ footer {
     text-align: right;
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 12px;
     font-weight: 300;
-    color: #374054;
+    color: #000000;
 }
 
 /*
@@ -582,19 +582,21 @@ footer {
 */
 
 #education {
-    padding: 10px 15px 15px 10px;
+    padding: 0px 15px 0px 10px;
     border-bottom: 1px solid $border;
     text-align: center;
 
     h2 {
         color: $heading;
-        margin-bottom: 50px;
+        margin: 0 0 0px 0;
+
     }
 }
 
 .education-block {
+    background-color: #ecf4d9;
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 10px auto;
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
@@ -615,7 +617,7 @@ footer {
         color: $text;
         clear: both;
         font-weight: 500;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
     }
 
     p, ul {
@@ -685,8 +687,8 @@ footer {
     max-width: 930px;
     margin: 0 auto 20px auto;
     overflow: hidden;
-    background: #fff;
-    border-radius: 4px;
+    background: #ecf4d9;
+    border-radius: 4px
 }
 
 .no-image {
@@ -726,8 +728,8 @@ footer {
 
     li {
         display: inline-block;
-        margin: 4px;
-        padding: 3px 7px;
+        margin: 3px;
+        padding: 1px 3px;
         color: $heading;
         background: darken($background-alt, 8%);
         list-style: none;
@@ -735,7 +737,7 @@ footer {
         font-size: 1.2em;
     }
     .heading-skills{
-    padding: 1px 15px;
+    padding: 0px 15px;
     position: relative;
     display: inline-block;
     font-size: 2em;
@@ -770,7 +772,7 @@ footer {
     text-align: center;
 
     h2 {
-        margin: 0 0 15px 0;
+        margin: 0 0 5px 0;
         color: #fff;
         font-weight: 500;
     }
@@ -784,7 +786,7 @@ footer {
         display: block;
         width: 100%;
         padding: 10px;
-        border-radius: 4px;
+        border-radius: 15px;
         border: none;
         margin-bottom: 10px;
         // Define base and accent colors
