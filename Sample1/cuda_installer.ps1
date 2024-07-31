@@ -1,8 +1,10 @@
-# Set the path to the CUDA installer .exe file
-$cudaInstaller = "C:\cuda_12.1.0_531.14_windows.exe"
-
-# Run the CUDA installer silently and log any errors
-Start-Process -FilePath $cudaInstaller -ArgumentList "/s" -Wait -NoNewWindow -ErrorAction Stop
-
-# Update the system PATH to include CUDA bin directory
-$env:Path += ";C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin"
+try
+{
+Start-Process -FilePath "cuda_12.1.0_531.14_windows.exe" -ArgumentList '-s', '-n','nvcc_12.1', 'cudart_12.1' -NoNewWindow -Wait -ErrorAction Stop
+}
+catch
+{
+    Write-Output "**___Something threw an exception or used Write-Error___**"
+    Write-Output "Ran into an issue: $PSItem"
+    Write-Output $_
+}
