@@ -1,5 +1,5 @@
 # DevOpsAdventures
-# To learn different aspects of DevOps
+## To learn different aspects of DevOps
 
 # &#128640; Website setup:
 ![Alt text](website_cycle.svg)
@@ -38,16 +38,16 @@
 		sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0
 
 # &#128640; Windows Containers
-	You can find the Dockerfile in Windows Container folder.
- 	I made a Dockerfile to have a windows container based on these Packages:
-		1.windows server 2022
-		2.Git-2.44.0-64
-		3.python-3.10.0
-		4.conan==1.64.1
-		5.cmake-3.29.0 
-		6.cuda_12.1.0_531.14
-		7. conda
-		8.visual studio 2019 --> Workloads: MSBuildTools - VCTools -->
-		https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2019
-	
-Tested in a VM in Proxmox server - host OS: Windows Server 2022 and process isolation. (Based on [microsoft documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/gpu-acceleration#requirements) GPU acceleration for workloads in Hyper-V-isolated Windows containers is not currently supported.)
+You can find the Dockerfile in Windows Container folder.
+I made a Dockerfile to have a windows container based on the following Packages. Tested in a VM in Proxmox server - host OS: Windows Server 2022 and process isolation. (Based on [microsoft documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/gpu-acceleration#requirements) GPU acceleration for workloads in Hyper-V-isolated Windows containers is not currently supported.):
+
+	1.windows server 2022
+	2.Git-2.44.0-64
+	3.python-3.10.0
+	4.conan==1.64.1
+	5.cmake-3.29.0 
+	6.cuda_12.1.0_531.14
+	7.conda
+	8.visual studio 2019 --> Workloads: MSBuildTools - VCTools
+
+[Visual Studio installation](https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2019)
