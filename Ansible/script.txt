@@ -49,6 +49,6 @@ ansible all -m apt -a "name=vim-nox state=latest" --become --ask-become-pass
 ansible all -m apt -a upgrade=dist --become --ask-become-pass
 
 ansible-playbook --ask-become-pass install_apache.yml
-
+ansible-playbook --tags db --ask-become-pass install_apache.yml
 
 ansible.builtin.package --> for different distributions
