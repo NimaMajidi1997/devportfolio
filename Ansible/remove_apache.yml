@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    ansible.builtin.apt:  # we are using a built in maodule, apt
+      update_cache: yes     #is part of this module
+    when: ansible_distribution == "Ubuntu"
+
+  - name: remove apache2 package
+    ansible.builtin.apt:  
+      name: apache2 
+      state: absent 
+    when: ansible_distribution == "Ubuntu"
+
+  - name: remove support for php
+    ansible.builtin.apt:  
+      name: libapache2-mod-php
+      state: absent 
+    when: ansible_distribution == "Ubuntu"
+
