@@ -11,7 +11,6 @@
 	5. Run container inside the server
  	6. https://www.nimadevops.de
 
-
 	1.0.0 --> initial setup
 	1.0.1 --> bug for mobile phone fixed, education added
 
@@ -37,6 +36,14 @@
 		docker rm -f port_web || true;
 		sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0
 
+
+# &#128640; Azure Pipeline Agents
+![Alt text](azure_pipeline_agents.svg)
+
+1. In Proxmox Virtual Environment, create a Virtual Machine. 
+2. Download the agent from Azure and install it inside this VM.
+3. Register this VM with agent pool that is already defined in Azure.
+4. Now, you can have an Azure pipeline and use the resources of this VM by means of self-hosted agent.
 # &#128640; Windows Containers
 You can find the Dockerfile in Windows Container folder.
 I made a Dockerfile to have a windows container based on the following Packages. Tested in a VM in Proxmox server - host OS: Windows Server 2022 and process isolation. (Based on [microsoft documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/gpu-acceleration#requirements) GPU acceleration for workloads in Hyper-V-isolated Windows containers is not currently supported.):
