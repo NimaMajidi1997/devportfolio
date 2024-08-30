@@ -34,10 +34,6 @@ ssha
 
 ansible all --key-file ~/.ssh/ansible -i inventory -m ping
 
-ansible.cfg:
-[defaults]
-inventory = inventory
-private_key_file = ~/.ssh/ansible
 
 ansible all -m ping
 
