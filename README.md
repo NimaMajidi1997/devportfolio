@@ -38,7 +38,7 @@
 
 
 # &#128640; Azure Pipeline Agents
-![Alt text](azure_pipeline_agents.svg)
+![Alt text](azure_pipeline_agents.png)
 
 1. In Proxmox Virtual Environment, create a Virtual Machine. 
 2. Download the agent from Azure and install it inside this VM.
