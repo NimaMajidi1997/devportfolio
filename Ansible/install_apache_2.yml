@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install packages
+    ansible.builtin.package:  
+      name: 
+        - "{{ apache_package }}" 
+        - "{{ php_package }}" 
+      state: latest
+      update_cache: yes 

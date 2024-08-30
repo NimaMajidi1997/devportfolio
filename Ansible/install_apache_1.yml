@@ -3,10 +3,20 @@
   become: true
   tasks:
 
-  - name: install packages
-    ansible.builtin.package:  
+  - name: install apache2 package
+    ansible.builtin.apt:  
       name: 
-        - "{{ apache_package }}" 
-        - "{{ php_package }}" 
+        - apache2 
+        - libapache2-mod-php
       state: latest
       update_cache: yes 
+    when: ansible_distribution == "Ubuntu"
+    
+  - name: install httpd package
+    ansible.builtin.dnf:  
+      name: 
+        - httpd
+        - php 
+      state: latest
+      update_cache: yes     
+    when: ansible_distribution == "Fedora"
