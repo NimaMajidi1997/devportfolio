@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: true
+  become: true-
   pre_tasks:
 
   - name: install updates for fedora
@@ -27,6 +27,16 @@
         - apache2
         - libapache2-mod-php7.4
     when: ansible_distribution == "Ubuntu"
+
+  - name: copy html file for site
+    tags: apache,ubuntu
+    ansible.builtin.copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mod: 0644
+
 
 - hosts: db_servers
   tags: db,fedora
