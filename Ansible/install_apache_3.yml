@@ -20,7 +20,7 @@
 - hosts: web_servers
   become: true
   tasks:
-  - name: install apache on webs servers
+  - name: install apache on web servers (Ubuntu)
     tags: apache,ubuntu
     ansible.builtin.apt:
       name: 
@@ -36,6 +36,26 @@
       owner: root
       group: root
       mod: 0644
+
+  - name: install apache on web servers (Fedora)
+    tags: apache,fedora
+    ansible.builtin.dnf:
+      name: httpd
+    when: ansible_distribution == "Fedora"
+
+  - name: ensure apache is running (Ubuntu)
+    tags: apache,ubuntu
+    ansible.builtin.service:
+      name: apache2
+      state: started
+    when: ansible_distribution == "Ubuntu"
+
+  - name: ensure apache is running (Fedora)
+    tags: apache,fedora
+    ansible.builtin.service:
+      name: httpd
+      state: started
+    when: ansible_distribution == "Fedora"
 
 
 - hosts: db_servers
