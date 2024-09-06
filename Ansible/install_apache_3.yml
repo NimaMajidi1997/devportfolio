@@ -23,6 +23,23 @@
       name: test_user
       groups: root
 
+
+  - name: add sudoers files for test_user
+    tags: always
+    ansible.builtin.copy:
+      src: test_user_sudoer
+      dest: /etc/sudoers.d/test_user
+      owner: root
+      group: root
+      mode: 0440
+  
+  - name: add ssh keys for test_user
+    tag: always
+    ansible.builtin.authorized_key:
+      user: test_user
+      key: "***pub_key***"
+      
+
 - hosts: web_servers
   become: true
   tasks:
