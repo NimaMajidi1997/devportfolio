@@ -1,0 +1,2 @@
+# test server roles implementation
+test_user ALL=(ALL) NOPASSWD: ALL
