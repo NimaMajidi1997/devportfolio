@@ -114,7 +114,7 @@ From the Ubuntu-WS copy the pub key: ***cat ~/.ssh/ansible.pub*** in Ubuntu-serv
 sudo su - test_user
 mkdir ~/.ssh
 chmod 700 ~/.ssh
-nano ~/.ssh/authorized_keys:
+nano ~/.ssh/authorized_keys: 
 ***pub_key***
 
 chmod 600 ~/.ssh/authorized_keys
