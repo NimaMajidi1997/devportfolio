@@ -8,7 +8,7 @@
       upgrade: dist
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
-
+# adding server roles
 - hosts: all
   become: true
   roles:

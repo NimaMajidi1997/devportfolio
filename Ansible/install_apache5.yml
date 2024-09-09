@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install apache on web servers
+    tags: apache
+    ansible.builtin.package: # for different distributions
+      name: "{{ apache_package }}"
+
+  - name: ensure apache is running
+    tags: apache
+    ansible.builtin.service:
+      name: "{{ apache_service }}"
+      state: started

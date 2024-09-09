@@ -121,10 +121,10 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 Also add ***remote_user = test_user*** to ***ansible.cfg***
 
-Now, you run this command and it does not need any password.
+Now, you run this command and it does not need any password. We added plays for creating bootstrap user
 ```bash
 ansible-playbook install_apache.yml
 ```
 
-
-add plays for creating bootstrap user
+Implementing server roles: install_apache4.yml + folder: roles
+Host variables: install_apache5.yml + folder: host_vars
