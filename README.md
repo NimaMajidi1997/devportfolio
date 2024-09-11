@@ -2,7 +2,7 @@
 ## To learn different aspects of DevOps
 
 # &#128640; Website setup:
-![Alt text](website_cycle.svg)
+![Alt text](images/website_cycle.svg)
 
 	1. Making Dockerfile
 	2. Build image and run container
@@ -38,7 +38,7 @@
 
 
 # &#128640; Azure Pipeline Agents
-![Alt text](azure_pipeline_agents.png)
+![Alt text](images/azure_pipeline_agents.png)
 
 1. In Proxmox Virtual Environment, create a Virtual Machine. 
 2. Download the agent from Azure and install it inside this VM.
