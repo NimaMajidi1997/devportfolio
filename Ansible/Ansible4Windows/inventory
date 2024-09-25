@@ -1,0 +1,11 @@
+# inventory
+[windows]
+windows_server ansible_host=<WINDOWS_IP>
+
+[windows:vars]
+ansible_user=<WINDOWS_USER>
+ansible_password=<WINDOWS_PASSWORD>
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_port=5985
+ansible_winrm_server_ert_validation=ignore
