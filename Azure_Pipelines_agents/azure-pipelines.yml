@@ -1,0 +1,52 @@
+trigger:
+  branches:
+    include:
+      - test_agent
+
+pool:
+  name: nima-test-pool-win2022
+
+resources:
+  containers:
+  - container: test_container
+    image: ##
+    volumes:
+    - 'C:/script/:C:/script/'
+    endpoint: windows_container
+
+
+jobs:
+- job: Check_Host
+  steps:
+  - powershell: |
+      if (Test-Path '$(Build.SourcesDirectory)\check_version.ps1') {
+          Write-Output "File exists!"
+          & '$(Build.SourcesDirectory)\check_version.ps1'
+      } else {
+          Write-Output "File not found!"
+      }
+      pwd
+    displayName: 'Run .ps1 script in Host'
+
+- job: Check_Container
+  container: test_container  # Use the container resource
+  steps:
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Build.SourcesDirectory)'  # The folder where check_version.ps1 is located
+      contents: 'Check_version.ps1'
+      targetFolder: 'C:/script'  # Target inside the container
+    displayName: 'Copy check_version.ps1 to container'
+  - powershell: |
+      if (Test-Path "C:\script\") {
+          Write-Output "content of this path --> C:\script\"
+          & ls "C:\script\"
+          Write-Output "check Versions ..."
+          & "C:\script\check_version.ps1"
+          Write-Output "CPU TEST ..."
+          & "C:\script\ipab-Sipp-setup.ps1"
+      } else {
+          Write-Output "Folder is not found!"
+      }
+      &'C:\Program Files\Git\cmd\git.exe'--version 
+    displayName: 'Run .ps1 scripts in container'
