@@ -1,11 +1,19 @@
-# inventory
 [windows]
-windows_server ansible_host=<WINDOWS_IP>
+windows_pro ansible_host=**.IP.**.**
 
 [windows:vars]
-ansible_user=<WINDOWS_USER>
-ansible_password=<WINDOWS_PASSWORD>
+ansible_user=***
+ansible_password=***
 ansible_connection=winrm
 ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore
 ansible_port=5985
-ansible_winrm_server_ert_validation=ignore
+
+[local]
+localhost ansible_connection=local
+
+[local:vars]
+artifactory_url=***
+download_path=/home/nima/windows/artifacts
+username=***
+api_key=***

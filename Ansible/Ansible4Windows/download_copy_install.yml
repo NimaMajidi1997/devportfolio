@@ -1,0 +1,44 @@
+---
+- name: Download files from JFrog Artifactory using curl
+  hosts: local
+  vars:
+    files_to_download:
+      - "app1.zip"
+      - "app2.zip"
+  tasks:
+    - name: Create download directory
+      file:
+        path: "{{ download_path }}"
+        state: directory
+    - name: Check if download directory exists
+      stat:
+        path: "{{ download_path }}"
+
+    - name: Download files from Artifactory
+      command: >
+        curl -u "{{ username }}:{{ api_key }}" -L -O {{ artifactory_url }}{{ item }}
+      with_items:
+        - "app1.zip"
+        - "app2.zip"
+      args:
+        chdir: "{{ download_path }}"
+
+- name: WinRM connection
+  hosts: windows
+  tasks:
+    - name: Create a directory
+      win_file:
+        path: "C:\\installers"
+        state: directory
+
+    - name: Copy files to Windows machine
+      win_copy:
+        src: "{{ item }}"
+        dest: "C:\\installers\\{{ item | basename }}"
+      with_items:
+        - test.ps1
+        - artifacts/app1.zip"
+        - artifacts/app2.zip"
+
+    - name: Run PowerShell script
+      win_shell: powershell -ExecutionPolicy Bypass -File C:\installers\test.ps1

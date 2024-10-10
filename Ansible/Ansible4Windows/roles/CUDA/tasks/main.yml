@@ -1,0 +1,21 @@
+- name: Ensure Chocolatey is installed
+  win_get_url:
+    url: https://chocolatey.org/install.ps1
+    dest: C:\install.ps1
+
+- name: Run Chocolatey installation script
+  win_shell: |
+    powershell -NoProfile -ExecutionPolicy Bypass -File C:\install.ps1
+  args:
+    executable: powershell
+
+- name: Remove installation script
+  win_file:
+    path: C:\install.ps1
+    state: absent
+    
+- name: Install NVIDIA CUDA Toolkit 12.4.0.551
+  win_chocolatey:
+    name: cuda
+    version: '12.4.0.551'
+    state: present

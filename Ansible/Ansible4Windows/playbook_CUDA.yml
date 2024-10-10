@@ -1,0 +1,7 @@
+---
+- name: Install Chocolatey on Windows
+  hosts: windows
+  gather_facts: false
+
+  roles:
+    - role: CUDA

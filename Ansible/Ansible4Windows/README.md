@@ -5,8 +5,9 @@ First, install this in Ubuntu-WS:
 ```bash
 sudo apt update
 sudo apt install pipx
-pipx install ansible-core
-pipx inject ansible-core pywinrm
+pipx install ansible
+pipx inject ansible pywinrm
+
 ```
 
 Then, you need to setup these in Windows by Powershell:
@@ -18,11 +19,23 @@ winrm set winrm/config/service/Auth '@{Basic="true"}'
 winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 winrm set winrm/config/listener?Address=*+Transport=HTTP
 Enable-PSRemoting -Force
+
+# winrm quickconfig -force
+# Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+# Set-Item -Path WSMan:\localhost\Service\AllowUnencrypted -Value $true
+# Restart-Service WinRM
+```
+To change the network profile from Public to Private or Domain:
+```bash
+Get-NetConnectionProfile
+Set-NetConnectionProfile -Name "YourNetworkName" -NetworkCategory Private
 ```
 
 In Ubuntu-WS you need also an inventory file and install_on_windows.yml. Now, you can easily run the .yml file:
 
 ```bash
-ansible-playbook -i inventory install_on_windows.yml
+ansible-playbook -i inventory download_copy_install.yml
+# CUDA installation with Chocolatey
+ansible-playbook -i inventory playbook_CUDA.yml
 ````
 

@@ -2,8 +2,10 @@ name: Push Docker Image and Deploy
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - '*'
+    # branches:
+    #   - main
 
 env:
   MY_IMAGE: "nimaianp75/devops_web:3.4.0"
