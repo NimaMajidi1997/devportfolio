@@ -1,6 +1,6 @@
 In this tutorial, we learn how to connect an Ubuntu-WS to a Windows machine.
 
-First, install this in Ubuntu-WS:
+First, install these in Ubuntu-WS:
 
 ```bash
 sudo apt update

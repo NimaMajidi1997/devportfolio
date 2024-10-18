@@ -64,7 +64,15 @@ This is an example azure-pipelines.yml file that we learn how to:
 - Run script inside the container
 
 Now, we have an windows agent in proxmox that runs the windows container on its host. By means of Conan, building and packaging of the project can be done sucessfully.
- 
+
+# &#128640; Ansible
+![Alt text](images/ansible.svg)
+1. Create virtual machines on the Proxmox server.
+2. Install packages like the CUDA toolkit and Docker.
+3. Set up Azure DevOps agents in the VMs.
+4. Deploy files from JFrog to the VMs
+
+
 # &#128640; Windows Containers
 You can find the Dockerfile in Windows Container folder.
 I made a Dockerfile to have a windows container based on the following Packages. Tested in a VM in Proxmox server - host OS: Windows Server 2022 and process isolation. (Based on [microsoft documentation](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/gpu-acceleration#requirements) GPU acceleration for workloads in Hyper-V-isolated Windows containers is not currently supported.):
