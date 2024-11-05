@@ -15,18 +15,12 @@
 	1.0.1 --> bug for mobile phone fixed, education added
 
  	2.0.0 --> About, Work Experience, DevOps experience completed, fonts changed
-	2.0.1 --> About me completed
-	2.0.2 --> Certificates added
-	2.0.3 --> Contact implemented
-	2.0.4 --> resume updated
-	2.0.5 --> resume modified
 	2.1.0 --> phone display fixed
 
 	3.0.0 --> change the nginx image from debian to ubuntu
 	3.1.0 --> ssl certificates added for https
-	3.1.1 --> add favicon and title
 	3.2.0 --> certificates in table, fix responsive
-	3.2.1 --> update resume - V4
+	3.2.1 --> update resume
 	3.2.2 --> docker-compose added for testing (docker-compose up --build)
 	3.3.0 --> docker certificate added, modify style
 
