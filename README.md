@@ -21,14 +21,14 @@
 	3.1.0 --> ssl certificates added for https
 	3.2.0 --> certificates in table, fix responsive
 	3.2.1 --> update resume
-	3.2.2 --> docker-compose added for testing (docker-compose up --build)
+	3.2.2 --> docker-compose added for testing (docker-compose up --build , docker-compose down --remove-orphans)
 	3.3.0 --> docker certificate added, modify style
 
 	Renew SSL certificates:
 		docker stop <container_id_or_name>;
 		sudo certbot certonly --standalone -d nimadevops.de -d www.nimadevops.de;
 		docker rm -f port_web || true;
-		sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.1.0
+		sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.4.2
 
 
 # &#128640; Azure Pipeline Agents
