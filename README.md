@@ -20,7 +20,6 @@
 	3.0.0 --> change the nginx image from debian to ubuntu
 	3.1.0 --> ssl certificates added for https
 	3.2.0 --> certificates in table, fix responsive
-	3.2.1 --> update resume
 	3.2.2 --> docker-compose added for testing (docker-compose up --build , docker-compose down --remove-orphans)
 	3.3.0 --> docker certificate added, modify style
 
