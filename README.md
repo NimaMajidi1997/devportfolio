@@ -22,7 +22,8 @@
 	3.2.0 --> certificates in table, fix responsive
 	3.2.2 --> docker-compose added for testing (docker-compose up --build , docker-compose down --remove-orphans)
 	3.3.0 --> docker certificate added, modify style
-
+	3.4.3 --> add google analytics
+	
 	Renew SSL certificates:
 		docker stop <container_id_or_name>;
 		sudo certbot certonly --standalone -d nimadevops.de -d www.nimadevops.de;
