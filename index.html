@@ -93,7 +93,7 @@
                     <style>
                         /* CSS for button styling */
                         .my-button1 {
-                            background-color: #7ee729; /* Green background */
+                            background-color: #d1e70b; /* Green background */
                             border-width: 1.6px;
                             border-style: solid;
                             border-color: black;
@@ -110,6 +110,27 @@
                 
                         /* Hover effect */
                         .my-button1:hover {
+                            background-color: #85a045; /* Darker green on hover */
+                        }
+                        /* CSS for button styling */
+                        .my-button-thesis {
+                            background-color: #d1e70b; /* Green background */
+                            border-width: 1.6px;
+                            border-style: solid;
+                            border-color: black;
+                            color: rgb(0, 0, 0); /* White text */
+                            padding: 8px 19px; /* Padding around text */
+                            text-align: center; /* Center text horizontally */
+                            text-decoration: none; /* Remove underline from text */
+                            display: inline-block; /* Display as inline block */
+                            font-size: 14px; /* Font size */
+                            cursor: pointer; /* Cursor style on hover */
+                            border-radius: 15px; /* Rounded corners */
+                            transform: translate(80%, -65%);
+                        }
+                
+                        /* Hover effect */
+                        .my-button-thesis:hover {
                             background-color: #85a045; /* Darker green on hover */
                         }
                     </style> 
@@ -177,7 +198,8 @@
                 <p>
                 <li>Optimization of transient coding in mixed lossless/lossy coding schemes</li>
                 <li>Grade: 1.7</li>
-                </p>
+                </p> 
+                <button class="my-button-thesis" id="pdfButton-thesis">Download Thesis</button>
             </div>
             <div data-date="04.2023 -- 09.2023" >
                 <img src="images/stabilo.svg" class="logo-img">
@@ -530,7 +552,13 @@
             newTab.document.body.innerHTML = '<iframe src="' + pdfUrl + '" style="width:100%; height:100%;"></iframe>';
         });
     </script>
-
+    <script>
+        document.getElementById('pdfButton-thesis').addEventListener('click', function() {
+            var pdfUrl = 'References/Thesis.pdf'; // Replace with the path to your PDF file
+            var newTab = window.open();
+            newTab.document.body.innerHTML = '<iframe src="' + pdfUrl + '" style="width:100%; height:100%;"></iframe>';
+        });
+    </script>
 </body>
 
 </html>
