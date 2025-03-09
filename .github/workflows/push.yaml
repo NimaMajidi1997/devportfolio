@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  MY_IMAGE: "nimaianp75/devops_web:3.4.3"
+  MY_IMAGE: "nimaianp75/devops_web:3.4.4"
 
 jobs:
   build:
@@ -47,10 +47,10 @@ jobs:
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'docker pull nimaianp75/devops_web:3.4.3'
+          ssh -o StrictHostKeyChecking=no $ip_add 'docker pull nimaianp75/devops_web:3.4.4'
 
       - name: SSH to Server and Run Docker Container
         env:
           ip_add: ${{ secrets.IP_ADD }}
         run: |
-          ssh -o StrictHostKeyChecking=no $ip_add 'docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.4.3'
+          ssh -o StrictHostKeyChecking=no $ip_add 'docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name port_web nimaianp75/devops_web:3.4.4'

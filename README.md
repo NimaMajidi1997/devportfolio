@@ -23,6 +23,7 @@
 	3.2.2 --> docker-compose added for testing (docker-compose up --build , docker-compose down --remove-orphans)
 	3.3.0 --> docker certificate added, modify style
 	3.4.3 --> add google analytics to website 
+	3.4.4 --> modify style - compile css auto (sass --watch scss/styles.scss:css/styles.css)
 
 	Renew SSL certificates:
 		docker stop <container_id_or_name>;
